@@ -7,6 +7,8 @@ const db = require('../database/tools.js')
 const app = express();
 const port = 5000;
 const sample = require('./data/sample.json');
+
+//Setup for Google's Distance Matrix API
 distance.key(require('../env/config.js'));
 distance.mode('walking');
 
@@ -18,9 +20,9 @@ app.use((req, res, next) => {
   next();
 })
 
-app.get('api/nearby/:location', (req, res) => {
+app.get('/api/nearby/:location', (req, res) => {
   let origin = [req.params.location];
-  let people = sample;
+  let people = sample; //This would be a real database connection query
   let maxPlaces = 5;
   distance.departure_time(Date.now());
   

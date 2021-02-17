@@ -1,4 +1,4 @@
-# Pet Pals - Pet Owner Social Matching App
+# Playpen - Pet Owner Social Matching App
 
 To Install this App:
 ```

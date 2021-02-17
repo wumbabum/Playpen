@@ -8,7 +8,14 @@ let View = (props) => {
     display = (<Signup handleSubmitAddress={props.handleSubmitAddress} />);
   }
   if (props.tab === 'Browse') {
-    display = (<Browse />);
+    display = (
+      <Browse 
+        handleFindMatches={props.handleFindMatches} 
+        goToSignup={props.goToSignup}
+        address={props.address} 
+        matches={props.matches}
+      />
+    );
   }
   
   return display;

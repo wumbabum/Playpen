@@ -1,16 +1,20 @@
 let nearby = (people, distances, maxPeople) => {
   //Add distances to each person
-  for (let i = 0; i < people.length; i++) {
-    people[i].distance = distances[i];
-  }
+  let matches = people.map((person, i) => {
+    return {
+      name: person.name,
+      distance: distances.rows[0].elements[i].distance.value,
+      time: distances.rows[0].elements[i].duration.text
+    }
+  });
 
   //Sort by distance
-  let result = people.sort((a, b) => {
+  matches.sort((a, b) => {
     return a.distance - b.distance;
   })
 
   //Send back maxPeople # of people
-  return people.slice(maxPeople);
+  return matches.slice(0, maxPeople);
 }
 
 module.exports = {
