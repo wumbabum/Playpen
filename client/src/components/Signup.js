@@ -28,7 +28,7 @@ class Signup extends React.Component {
     return (
       <form onSubmit={this.handleSubmitAddress}>
         <label>
-          Enter your address:
+          Enter your home address:
           <input type="text" onChange={this.handleAddressChange} />
         </label>
         <button type="submit" value="Submit">Submit</button>
