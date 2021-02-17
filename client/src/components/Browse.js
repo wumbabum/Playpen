@@ -37,6 +37,11 @@ class Browse extends React.Component {
                 <li className={style['match']} key={index}>
                   <div>{match.name + ': '}</div>
                   <div>{match.time + '   away.'}</div>
+                  <div className={style['mbutton']}>
+                    <div>
+                      Match
+                    </div>
+                  </div>
                 </li>
               ))
             }
