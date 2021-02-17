@@ -16,14 +16,20 @@ main
 
 .page
   width: 500px
-  margin-top: 1rem
   background-color: rgba(255, 255, 255, 0.95)
   border: 1px solid #c0bdbd
   border-radius: .12rem
-  padding: 1.5rem .5rem .5rem
+  padding: .5rem .5rem 1.5rem .5rem
 
 .content
-  border-top: 1px solid grey
+  margin-top: .5rem
+
+h1
+  margin: 0
+  padding: .5rem
+  background-color: rgba(34, 18, 122, 0.747)
+  color: white
+  width: 502px
 
 form
   display: block
@@ -67,13 +73,13 @@ p
   
 .navigation
   display: block
-  width: 400px
-  height: 60px
+  margin-top: 1rem
+  width: 518px
 
 .tab
   border: solid 1px grey
   float: left
-  padding: 20px
+  padding: .1rem 2rem
   margin: auto
   cursor: pointer
 
@@ -90,8 +96,13 @@ p
   @include flexdown
 
 .match
-  padding: .5rem
+  padding: 1.2rem
   text-align: center
   border-top: solid 1px grey
   box-sizing: border-box
-  flex-grow: 1
+  width: 100%
+  display: flex
+  div
+    margin-left: 1rem
+    min-width: 5rem
+    text-align: left

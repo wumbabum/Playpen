@@ -18,7 +18,7 @@ class App extends React.Component {
       matches: []
     };
 
-    this.handleSubmitAddress = this.handleSubmitAddress.bind(this);
+    this.handleSubmitForm = this.handleSubmitForm.bind(this);
     this.handleTabClick = this.handleTabClick.bind(this);
     this.handleFindMatches = this.handleFindMatches.bind(this);
   }
@@ -29,13 +29,13 @@ class App extends React.Component {
     });
   }
 
-  handleSubmitAddress(address) {
+  handleSubmitForm(input) {
     //Add address validation here
     if (true) {
       this.setState({
-        address: address,
+        address: input.address,
         hasValidAddress: true,
-        message: 'Your address has been updated.'
+        message: 'Your info has been updated.'
       })
     }
   }
@@ -63,12 +63,13 @@ class App extends React.Component {
   render() {
     return (
       <main>
+        <Navigation tab={this.state.tab} handleTabClick={this.handleTabClick} />
+        <h1>PlayPen</h1>
         <div className={style['page']}>
-          <Navigation tab={this.state.tab} handleTabClick={this.handleTabClick} />
           <div className={style['content']} >
             <View 
               tab={this.state.tab} 
-              handleSubmitAddress={this.handleSubmitAddress}
+              handleSubmitForm={this.handleSubmitForm}
               handleFindMatches={this.handleFindMatches}
               goToSignup={this.handleTabClick}
               address={this.state.address}

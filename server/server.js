@@ -39,7 +39,7 @@ app.get('/api/nearby/:location', (req, res) => {
 })
 
 app.get('/api/dogs', (req, res) => {
-  res.send('api for dogs work in progress');
+  res.send('api for dogs / work in progress');
 });
 
 app.listen(port, () => {

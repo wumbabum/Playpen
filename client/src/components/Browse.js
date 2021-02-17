@@ -34,7 +34,10 @@ class Browse extends React.Component {
           <ul className={style['match-container']}>
             {
               this.props.matches.map((match, index) => (
-                <li className={style['match']} key={index}>{match.name + ': ' + match.time + '   away.'}</li>
+                <li className={style['match']} key={index}>
+                  <div>{match.name + ': '}</div>
+                  <div>{match.time + '   away.'}</div>
+                </li>
               ))
             }
           </ul>
