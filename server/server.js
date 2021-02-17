@@ -3,6 +3,7 @@ const path = require('path');
 const axios = require('axios');
 var distance = require('google-distance-matrix');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const db = require('../database/tools.js')
 const app = express();
 const port = 5000;
@@ -14,6 +15,7 @@ distance.mode('walking');
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.use((req, res, next) => {
   console.log(`Serving ${req.method} request at ${req.url}`);
