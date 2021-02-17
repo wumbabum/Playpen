@@ -4,7 +4,7 @@ import axios from 'axios';
 import Navigation from './Navigation';
 import View from './View';
 import Messages from './Messages';
-const apiServer = 'localhost';
+const Server = window.location.href;
 
 class App extends React.Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class App extends React.Component {
 
   handleFindMatches() {
     if (this.state.hasValidAddress) {
-      axios.get(`http://${apiServer}:5000/api/nearby/${this.state.address}`)
+      axios.get(`${Server}api/nearby/${this.state.address}`)
         .then(response => {
           let matches = response.data;
           console.log(matches);
